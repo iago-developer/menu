@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+body {
+  background-image: url("./components/images/fundo.webp");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  & div.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
-.App-link {
-  color: #61dafb;
-}
+    header {
+      background-color: #0e0e0e;
+      text-align: center;
+      width: 100%;
+      padding: 30px;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    nav {
+      background-color: gainsboro;
+      width: 100%;
+      position: sticky;
+      top: -2px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+
+      div.links {
+        display: flex;
+
+        & div.link.selected {
+          border-bottom: 7px solid #0e0e0e;
+
+          a {
+            font-weight: bold;
+          }
+        }
+
+        div.link {
+          padding: 10px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          border-bottom: 7px solid gray;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            a {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      div.links > div.link > a {
+        margin: 10px;
+        color: #0e0e0e;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        font-weight: normal;
+      }
+    }
+
+    main {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-direction: column;
+      gap: 20px;
+      background-color: gainsboro;
+      padding-top: 30px;
+
+      section.secao {
+        height: 100%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      section.secao > section {
+        background-color: #fff;
+        color: #0e0e0e;
+        width: 90%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.586);
+        display: flex;
+        overflow: hidden;
+        gap: 30px;
+        z-index: 1;
+        position: relative;
+
+        & div.cursor {
+          height: 100%;
+          width: 100%;
+          cursor: pointer;
+          position: absolute;
+        }
+
+        img {
+          height: 100%;
+          width: 180px;
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        article {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: start;
+          justify-content: start;
+          flex-direction: column;
+          margin-right: 30px;
+          padding: 20px 0px;
+        }
+      }
+    }
+
+    footer {
+      background-color: #0e0e0e;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+
+      .button-zap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .button-instagram {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        
+        a {
+          background-image: linear-gradient(200deg, #ff1359, #fb2845, #f4b600);
+        }
+      }
+
+      a {
+        background-color: green;
+        color: #fff;
+        height: auto;
+        border: none;
+        border-radius: 8px;
+        margin: 30px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: all 0.6s ease;
+
+        &:hover {
+          transform: scale(0.96);
+        }
+
+        i {
+          font-size: 30px;
+        }
+
+        h3 {
+          margin-left: 16px;
+        }
+      }
+    }
+
+    .iconZap {
+      background-color: green;
+      border-radius: 50%;
+      position: fixed;
+      color: #fff;
+      text-decoration: none;
+      font-size: 2em;
+      margin: 16px;
+      padding: 20px;
+      bottom: 0%;
+      right: 0%;
+      z-index: 4;
+      transition: all .6s ease;
+
+      &:hover {
+        transform: scale(0.94);
+      }
+    }
   }
 }
