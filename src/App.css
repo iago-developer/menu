@@ -133,7 +133,7 @@ section.secao > section > article {
 div.cursor {
   height: 100%;
   width: 100%;
-  cursor: pointer;
+  cursor: auto;
   position: absolute;
 }
 
@@ -225,6 +225,14 @@ h3 {
   section.secao {
     display: flex;
     flex-direction: column;
+  }
+
+  div.cursor {
+    cursor: pointer;
+  }
+
+  div.area-box {
+    cursor: pointer !important;
   }
 
   div.box {

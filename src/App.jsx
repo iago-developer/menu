@@ -27,7 +27,7 @@ export default function App() {
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
+      cursor: auto;
     `;
     document.body.prepend(area);
 
