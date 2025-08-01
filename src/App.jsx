@@ -4,9 +4,11 @@ import "./App.css";
 import Hamburguer01 from "./components/images/hamburguer01.webp";
 import Hamburguer02 from "./components/images/hamburguer02.webp";
 import Hamburguer03 from "./components/images/hamburguer03.webp";
+import Hamburguer04 from "./components/images/hamburguer04.webp";
 import Pizza01 from "./components/images/pizza01.webp";
 import Pizza02 from "./components/images/pizza02.jpg";
 import Pizza03 from "./components/images/pizza03.jpeg";
+import Pizza04 from "./components/images/pizza04.jpeg";
 import Bebida01 from "./components/images/bebida01.webp";
 import Bebida02 from "./components/images/bebida02.webp";
 import Bebida03 from "./components/images/bebida03.webp";
@@ -51,6 +53,7 @@ export default function App() {
     area.appendChild(box);
 
     const img = document.createElement("img");
+    img.setAttribute("class", "image-window");
     img.style.cssText = `
       box-shadow: inset 4px 2px 2px rgba(0,0,0, 0.7);
       border-radius: 10px;
@@ -84,6 +87,7 @@ export default function App() {
     section.appendChild(line);
 
     const paragraph = document.createElement("p");
+    paragraph.setAttribute("class", "paragraph-window");
     paragraph.style.cssText = `
       font-size: 1.3rem;
     `;
@@ -132,7 +136,7 @@ export default function App() {
       <nav>
         <div className="links">
           <div className="link selected">
-            <a href="#hamburgueres">Hamburgueres</a>
+            <a href="#hamburgueres">Hambúrgueres</a>
           </div>
           <div className="link">
             <a href="#pizzas">Pizzas</a>
@@ -188,7 +192,7 @@ export default function App() {
               <img src={Hamburguer02} alt="item do cardápio" />
             </div>
             <article>
-              <h2>Hamburguer da Casa.</h2>
+              <h2>Hambúrguer da Casa.</h2>
               <br />
               <h2>R$ 20,00</h2>
             </article>
@@ -210,7 +214,29 @@ export default function App() {
               <img src={Hamburguer03} alt="item do cardápio" />
             </div>
             <article>
-              <h2>Hamburguer King.</h2>
+              <h2>Hambúrguer King.</h2>
+              <br />
+              <h2>R$ 25,00</h2>
+            </article>
+          </section>
+          <section>
+            <div
+              className="cursor"
+              onClick={() =>
+                pop_up(
+                  Hamburguer04,
+                  "Burguer Cheese.",
+                  "Pão semi-italiano, tomate, cebola, alface, hambúrguer caseiro e molho da casa.",
+                  "25,00"
+                )
+              }
+            ></div>
+
+            <div className="image-burguer">
+              <img src={Hamburguer04} alt="item do cardápio" />
+            </div>
+            <article>
+              <h2>Burguer Cheese.</h2>
               <br />
               <h2>R$ 25,00</h2>
             </article>
@@ -280,6 +306,28 @@ export default function App() {
               <h2>Pizza de Frango.</h2>
               <br />
               <h2>R$ 30,00</h2>
+            </article>
+          </section>
+          <section>
+            <div
+              className="cursor"
+              onClick={() =>
+                pop_up(
+                  Pizza04,
+                  "Pizza de Bacon.",
+                  "Pão semi-italiano, tomate, cebola, alface, hambúrguer caseiro e molho da casa.",
+                  "40,00"
+                )
+              }
+            ></div>
+
+            <div className="image-pizza">
+              <img src={Pizza04} alt="item do cardápio" />
+            </div>
+            <article>
+              <h2>Pizza de Bacon.</h2>
+              <br />
+              <h2>R$ 40,00</h2>
             </article>
           </section>
         </section>

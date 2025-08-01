@@ -101,8 +101,8 @@ section.secao {
 section.secao > section {
   background-color: #fff;
   color: #0e0e0e;
-  width: 90%;
-  height: auto;
+  width: auto;
+  height: 180px;
   border-radius: 10px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.586);
   display: flex !important;
@@ -113,9 +113,10 @@ section.secao > section {
 }
 
 section.secao > section img {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
   height: 100%;
   width: 180px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 section.secao > section > article {
@@ -123,7 +124,7 @@ section.secao > section > article {
   width: 100%;
   display: flex;
   align-items: start;
-  justify-content: start;
+  justify-content: center;
   flex-direction: column;
   margin-right: 30px;
   padding: 20px 0px;
@@ -202,4 +203,39 @@ h3 {
 
 .iconZap:hover {
   transform: scale(0.94);
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 60px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  main {
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    grid-template-column: 1fr 1fr 1fr;
+    grid-template-row: 1fr;
+  }
+
+  section.secao {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.box {
+    width: auto !important;
+  }
+
+  img.image-window {
+    width: 400px !important;
+  }
+
+  p.paragraph-window {
+    width: 300px !important;
+  }
 }
